@@ -188,7 +188,44 @@ body {
 
 .footer {
     background-color: white;
-    height: 85px;
+    height: 90px;
+    width: 80%;
+    margin: 0 auto;
+    padding-left: 50px;
+}
+
+.footer-left, .footer-right {
+    width: 50%;
+    float: left;
+    height: 100%;
+
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.footer-right {
+    justify-content: right;
+}
+
+.footer-right p {
+    display: inline-block;
+}
+
+.footer p {
+    display: inline;
+    color: #1e324a;
+    font: normal normal bold 1em 'open sans condensed',sans-serif;
+}
+
+.footer a {
+    padding: 0 10px;
 }
 
 /* .imagem-sobre img {
