@@ -441,6 +441,25 @@ li a {
     width: 100%;
 }
 
+.localizacao {
+    background-color: #1e324a;
+}
+
+.localizacao-container {
+    width: 75%;
+    padding-top: 40px;
+    margin:0 auto;
+}
+
+.localizacao h1 {
+    color: white;
+}
+
+.localizacao p {
+    margin: 0;
+    color: white;
+}
+
 .footer {
     background-color: white;
     height: 90px;
