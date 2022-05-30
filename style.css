@@ -396,6 +396,10 @@ li a {
     color: #f57b1b;
 }
 
+.color-3 {
+    color: #bbbbbb;
+}
+
 #submit {
     height: 3em;
     border: 0;
