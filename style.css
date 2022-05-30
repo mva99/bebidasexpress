@@ -463,9 +463,8 @@ li a {
 .footer {
     background-color: white;
     height: 90px;
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
-    padding-left: 50px;
 }
 
 .footer-left, .footer-right {
