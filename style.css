@@ -240,7 +240,6 @@ li a {
     width: 75%;
     padding-top: 40px;
     margin:0 auto;
-    border: 1px solid black;
 }
 
 .depoimentos-container h1 {
@@ -346,13 +345,16 @@ li a {
     width: 75%;
     padding-top: 40px;
     margin:0 auto;
-    border: 1px solid black;
     overflow: auto;
 }
 
 .contatos, .contato-formulario {
     width: 50%;
     float: left;
+}
+
+.contato-formulario {
+    margin-top: 17vh;
 }
 
 .contatos p img {
@@ -363,16 +365,49 @@ li a {
     height: 25px;
 }
 
-.p1 {
+.p1, .p2 {
     color: rgb(30,50,74);
-    font-weight: normal;
+    font-weight: 600;
+}
+
+.p1 {
+    margin-bottom: 5em;
 }
 
 .row {
     background: #f6f6f6;
-    border: 1px solid #ccc;
     overflow: hidden;
-    padding: 10px;
+    padding: 5px 10px;
+}
+
+.row #text {
+    height: 10em;
+}
+
+.color-1 {
+    color: #1e324a;
+}
+
+.color-2 {
+    color: #f57b1b;
+}
+
+#submit {
+    height: 3em;
+    border: 0;
+    background-color: #f57b1b;
+
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    color: white;
+}
+
+#submit:hover {
+    background-color: #f8bb8a;
 }
 
 .col {
@@ -384,13 +419,13 @@ li a {
 
 .col-left {
     float: left;
-    width: 50%;
+    width: 49%;
 }
 
 .col-right {
     margin-left: auto; 
     margin-right: 0;
-    width: 50%;
+    width: 49%;
 }
 
 .col input, .col2 input {
@@ -403,7 +438,7 @@ li a {
 }
 
 .col2 input {
-    width: 90%;
+    width: 100%;
 }
 
 .footer {
