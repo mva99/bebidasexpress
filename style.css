@@ -143,7 +143,6 @@ li a {
 .sobre-container {
     height: 720px;
     width: 75%;
-    border: 1px solid black;
     margin:0 auto;
     display: flex;
 }
@@ -162,16 +161,76 @@ li a {
     height:100vh;
 }
 
-.servicoes-container {
+.servicos-container {
     width: 75%;
     padding-top: 40px;
     margin:0 auto;
-    border: 1px solid black;
 }
 
-.servicoes-container h1 {
+.servicos-container h1 {
     color: white;
 }
+
+.item-servico {
+    padding: 20px;
+    background-color: white;
+    width: 48%;
+    height: 250px;
+    float: left;
+}
+
+.item-servico-divisor {
+    padding: 20px;
+    background-color: #1e324a;
+    width: 2%;
+    height: 250px;
+    float: left;
+}
+
+.item-servico-imagem, .item-servico-texto{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.item-servico-imagem {
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-servico-imagem img{
+    width: 150px;
+    height: 150px;
+}
+
+.item-servico-texto {
+    padding: 0 15px;
+}
+
+.item-servico-texto p {
+    margin: 0;
+}
+
+.item-servico-texto p:first-child, .item-servico-texto p:last-child {
+    color: #3d8a86;
+}
+
+.item-servico-texto p:first-child {
+    margin-bottom: 25px;
+}
+
+.item-servico-texto p:last-child {
+    margin-top: 25px;
+}
+
+
 
 .depoimentos {
     background-color: #f57b1b;
