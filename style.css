@@ -397,7 +397,6 @@ li a {
 
     .contatos, .contato-formulario {
         width: 100%;
-        border: 1px solid black;
     }
 }
 
@@ -500,6 +499,20 @@ li a {
 
     .col input {
         width: 100%;
+    }
+}
+
+@media (max-width: 499px) {
+    .col-left {
+        margin-bottom: 10px;
+    }
+
+    .p2 {
+        justify-content: center;
+    }
+
+    .p2 img{
+        width: 1.3em;
     }
 }
 
