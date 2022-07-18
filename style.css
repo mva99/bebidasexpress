@@ -257,7 +257,6 @@ li a {
     }
 }
 
-
 .servicos {
     background-color: #1e324a;
     height:100vh;
@@ -330,7 +329,29 @@ li a {
     margin-top: 25px;
 }
 
+@media (max-width: 950px) {
+    .servicos {
+        height:115vh;
+    }
 
+    .servicos-container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 750px) {
+    .servicos-container {
+        width: 80%;
+    }
+    
+    .item-servico {
+        width: 100%;
+    }
+
+    .servicos {
+        height:200vh;
+    }
+}
 
 .depoimentos {
     background-color: #f57b1b;
