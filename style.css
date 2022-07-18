@@ -273,19 +273,17 @@ li a {
     color: white;
 }
 
+.servicos-itens {
+    border: 1px solid black;
+
+}
+
 .item-servico {
     padding: 20px;
     background-color: white;
-    width: 48%;
+    width: 50%;
     height: 250px;
-    float: left;
-}
-
-.item-servico-divisor {
-    padding: 20px;
-    background-color: #1e324a;
-    width: 2%;
-    height: 250px;
+    margin: 0px;
     float: left;
 }
 
