@@ -340,9 +340,6 @@ li a {
 }
 
 @media (max-width: 750px) {
-    .servicos-container {
-        width: 80%;
-    }
     
     .item-servico {
         width: 100%;
