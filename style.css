@@ -528,6 +528,24 @@ li a {
     color: white;
 }
 
+@media (max-width: 620px) {
+    .localizacao-container {
+        width: 95%;
+        padding-top: 0px;
+    }
+
+    .localizacao h1 {
+        font-size: 2em;
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+
+    .mapa {
+        height: 20em;
+    }
+}
+
+
 .footer {
     background-color: white;
     height: 90px;
