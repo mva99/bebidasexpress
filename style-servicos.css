@@ -1,6 +1,6 @@
 .secao-servico {
     background-color: white;
-    height:100vh;
+    height:70vh;
 }
 
 .secao-servico-container {
@@ -22,7 +22,6 @@
 }
 
 .secao-servico-2 {
-    outline: 1px solid black;
     float: left;
     width: 80%;
     height: 100%;
@@ -32,12 +31,14 @@
 
 .secao-servico-vantagens {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    /* justify-content: space-between;
+    align-items: center; */
 }
 
 .secao-servico-vantagem {
-    
+    width: 33.3%;
+    padding: 10px;
 }
 
 .secao-servico-h1, .secao-servico-h2 {
@@ -50,4 +51,15 @@
 
 .secao-servico-p {
     font-size: 18px;
+}
+
+.button-green {
+    border: 2px solid #3d8a86;
+    color: #3d8a86;
+}
+
+.button-green:hover {
+    border-color: #3d8a86;
+    background-color: #3d8a86;
+    color: white;
 }
