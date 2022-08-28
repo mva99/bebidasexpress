@@ -295,6 +295,11 @@ li a {
     float: left;
 }
 
+.item-servico a {
+    text-decoration: none;
+    margin: 0px;
+}
+
 .item-servico-imagem, .item-servico-texto{
     width: 50%;
     height: 100%;
@@ -324,6 +329,11 @@ li a {
 
 .item-servico-texto p {
     margin: 0;
+}
+
+.item-servico-texto p a {
+    color: inherit;
+    text-decoration: inherit;
 }
 
 .item-servico-texto p:first-child, .item-servico-texto p:last-child {
