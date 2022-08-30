@@ -1,0 +1,31 @@
+.secao-calculadora {
+    width: 75%;
+    padding-top: 80px;
+    margin: 0 auto;
+}
+
+.secao-calculadora h1 {
+    margin: 0px;
+}
+
+.secao-calculadora-container {
+    height: 100px;
+    margin: 0 auto;
+}
+
+.coluna {
+    /* outline: 1px solid black; */
+    /* text-align: center; */
+}
+
+.radio-lg .custom-control-label::before, .checkbox-lg .custom-control-label::before, 
+.radio-lg .custom-control-label::after, .checkbox-lg .custom-control-label::after {
+  top: .8rem;
+  width: 1.55rem;
+  height: 1.55rem;
+}
+
+.radio-lg .custom-control-label, .checkbox-lg .custom-control-label {
+  padding-top: 13px;
+  padding-left: 6px;
+}
