@@ -1,0 +1,2 @@
+https://www.techiedelight.com/pt/implement-toggle-check-box-javascript/
+https://blog.shhdharmen.me/create-custom-checkboxes-and-radios-in-bootstrap
