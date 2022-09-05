@@ -9,13 +9,24 @@
 }
 
 .secao-calculadora-container {
-    height: 100px;
-    margin: 0 auto;
+  outline: 1px solid black;
+  width: 700px;
+}
+
+
+.secao-calculadora-form {
+    /* margin: 0 auto; */
+    /* outline: 1px solid black; */
+    
+}
+.form-row {
+  /* outline: 1px solid black; */
 }
 
 .coluna {
     /* outline: 1px solid black; */
     /* text-align: center; */
+    /* outline: 1px solid black; */
 }
 
 .radio-lg .custom-control-label::before, .checkbox-lg .custom-control-label::before, 
