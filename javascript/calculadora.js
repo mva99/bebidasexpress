@@ -1,6 +1,21 @@
 //document.getElementById("bebidas-alcoolicas").style.display = "none";
 
 
+
+calcularBebidas();
+
+document.getElementById('input_qtd_adultos').onchange = function() {
+    calcularBebidas();
+}
+
+function calcularBebidas() {
+    spansQtd = document.getElementsByClassName("span-qtd-bebida");
+
+    Array.prototype.forEach.call(spansQtd, function(item) {
+        item.innerHTML = " x " + document.getElementById('input_qtd_adultos').value;
+    });
+}
+
 document.getElementById('Bebida1').onclick = function() {
     var checkbox = document.getElementById('Bebida1');
     if (checkbox.checked) {
