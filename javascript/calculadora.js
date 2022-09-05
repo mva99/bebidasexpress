@@ -27,3 +27,13 @@ document.getElementById('Bebida3').onclick = function() {
         document.getElementById("bebidas-destiladas").style.display = "none";
     }
 }
+
+function SelecionarBebida(tipo_bebida) {
+    // alert(tipo_bebida);
+    var checkbox = document.getElementById('checkbox-' + tipo_bebida);
+    if (checkbox.checked) {
+        document.getElementById("row-" + tipo_bebida).style.display = "table-row";
+    } else {
+        document.getElementById("row-" + tipo_bebida).style.display = "none";
+    }
+}
