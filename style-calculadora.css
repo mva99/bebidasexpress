@@ -1,7 +1,10 @@
 .secao-calculadora {
-    width: 800px;
-    padding-top: 80px;
-    margin: 0 auto;
+    background-color: #e4e4e4;
+}
+
+.secao-calculadora-in {
+  width: 800px;
+  margin: 0 auto;
 }
 
 .secao-calculadora h1 {

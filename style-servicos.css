@@ -130,3 +130,16 @@
 .servico-small:nth-child(even) p {
     color: #f57b1b;
 }
+
+.botoes-servicos {
+    display: flexbox;
+}
+
+.botoes-servicos div {
+    float: left;
+    width: 50%;
+}
+
+.botoes-servicos :last-child {
+    text-align: right;
+}

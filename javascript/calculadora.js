@@ -1,6 +1,24 @@
 //document.getElementById("bebidas-alcoolicas").style.display = "none";
+// document.getElementsByClassName('btn-calculadora').onclick = function() {
+    
+// }
 
+const botaoCalculadora = document.querySelector('.btn-calculadora')
+botaoCalculadora.onclick = (e) => {
+    //https://thewebdev.info/2022/02/07/how-to-prevent-reload-with-link-onclick-without/
+    e.preventDefault()
+    
+    exibirOcultarCalculadora();
+}
 
+function exibirOcultarCalculadora() {
+    var exibido = document.getElementById('secao-calculadora').style.display;
+    if (exibido == 'none') {
+        document.getElementById('secao-calculadora').style.display = "inherit";
+    } else {
+        document.getElementById('secao-calculadora').style.display = "none";
+    }
+}
 
 calcularBebidas();
 

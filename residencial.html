@@ -7,6 +7,9 @@
     <title></title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style-servicos.css">
+    <link rel="stylesheet" href="style-calculadora.css">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <div class="header">
@@ -53,10 +56,364 @@
                     </div>
                 </div>
                 <br><br>
-                <a class="button button-green" href="#">FALE COM A GENTE</a>
+                <div class="botoes-servicos">
+                    <div>
+                        <a class="button button-green btn-calculadora" onclick="exibirOcultarCalculadora()" href="">CALCULADORA</a>
+                    </div>
+                    <div>
+                        <a class="button button-green btn-fale-com-a-gente" href="#">FALE COM A GENTE</a>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
+
+    <div class="secao-calculadora" id="secao-calculadora" style="display:none;">
+        <div class="secao-calculadora-in">
+            <h1>Calculadora</h1>
+            <div class="secao-calculadora-container">
+
+                <br>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                    <label for="input_qtd_adultos">Quantidade de Adultos:</label>
+                    <input type="number" class="form-control" id="input_qtd_adultos" value="5">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">                        
+                            <table class="table">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Tipo</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>
+                                        <div class="custom-control custom-radio radio-lg">
+                                            <input class="custom-control-input" type="radio" name="Tipo" id="Tipo1">
+                                            <label class="custom-control-label" for="Tipo1">Aniversário</label>
+                                        </div>
+                                    </td></tr>
+
+                                    <tr><td>
+                                        <div class="custom-control custom-radio radio-lg">
+                                            <input class="custom-control-input" type="radio" name="Tipo" id="Tipo2">
+                                            <label class="custom-control-label" for="Tipo2">Churrasco</label>
+                                        </div>
+                                    </td></tr>
+
+                                    <tr><td>
+                                        <div class="custom-control custom-radio radio-lg">
+                                            <input class="custom-control-input" type="radio" name="Tipo" id="Tipo3">
+                                            <label class="custom-control-label" for="Tipo3">Casamento</label>
+                                        </div>
+                                    </td></tr>
+
+                                    <tr><td>
+                                        <div class="custom-control custom-radio radio-lg">
+                                            <input class="custom-control-input" type="radio" name="Tipo" id="Tipo4">
+                                            <label class="custom-control-label" for="Tipo4">15 Anos</label>
+                                        </div>
+                                    </td></tr>
+
+                                    <tr><td>
+                                        <div class="custom-control custom-radio radio-lg">
+                                            <input class="custom-control-input" type="radio" name="Tipo" id="Tipo5">
+                                            <label class="custom-control-label" for="Tipo5">Bodas</label>
+                                        </div>
+                                    </td></tr>
+
+                                    <tr><td>
+                                        <div class="custom-control custom-radio radio-lg">
+                                            <input class="custom-control-input" type="radio" name="Tipo" id="Tipo6">
+                                            <label class="custom-control-label" for="Tipo6">Chá de Panela</label>
+                                        </div>
+                                    </td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-sm">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Local</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>
+                                        <div class="custom-control custom-radio radio-lg">
+                                            <input class="custom-control-input" type="radio" name="Local" id="Local1">
+                                            <label class="custom-control-label" for="Local1">Residencial</label>
+                                        </div>
+                                    </td></tr>
+                                    <tr><td>
+                                        <div class="custom-control custom-radio radio-lg">
+                                            <input class="custom-control-input" type="radio" name="Local" id="Local2">
+                                            <label class="custom-control-label" for="Local2">Alugado</label>
+                                        </div>
+                                    </td></tr>
+                                    <tr><td>
+                                        <div class="custom-control custom-radio radio-lg">
+                                            <input class="custom-control-input" type="radio" name="Local" id="Local3">
+                                            <label class="custom-control-label" for="Local3">Buffet</label>
+                                        </div>
+                                    </td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-sm">
+
+                            <table class="table">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Bebidas</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>                                
+                                        <div class="custom-control custom-checkbox checkbox-lg">
+                                            <input class="custom-control-input" type="checkbox" name="Local" id="Bebida1">
+                                            <label class="custom-control-label" for="Bebida1">Alcoólicas</label>
+                                        </div>
+                                    </td></tr>
+
+                                    <tr><td>
+                                        <div class="custom-control custom-checkbox checkbox-lg">
+                                            <input class="custom-control-input" type="checkbox" name="Local" id="Bebida2">
+                                            <label class="custom-control-label" for="Bebida2">Não Alcoólicas</label>
+                                        </div>
+                                    </td></tr>
+
+                                    <tr><td>
+                                        <div class="custom-control custom-checkbox checkbox-lg">
+                                            <input class="custom-control-input" type="checkbox" name="Local" id="Bebida3">
+                                            <label class="custom-control-label" for="Bebida3">Destilados</label>
+                                        </div>
+                                    </td></tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm" id="bebidas-alcoolicas" style="display:none;">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Alcoólicas</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>
+                                        <div class="custom-control custom-checkbox checkbox-lg">
+                                            <input class="custom-control-input" type="checkbox" name="alcoolicas" id="checkbox-cerveja" onclick="SelecionarBebida('cerveja')">
+                                            <label class="custom-control-label" for="checkbox-cerveja">Cerveja</label>
+                                        </div>
+                                    </td></tr>
+                                    <tr><td>
+                                        <div class="custom-control custom-checkbox checkbox-lg">
+                                            <input class="custom-control-input" type="checkbox" name="alcoolicas" id="checkbox-vinho" onclick="SelecionarBebida('vinho')">
+                                            <label class="custom-control-label" for="checkbox-vinho">Vinho</label>
+                                        </div>
+                                    </td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-sm" id="bebidas-nao-alcoolicas" style="display:none;">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Não Alcoólicas</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>
+                                        <div class="custom-control custom-checkbox checkbox-lg">
+                                            <input class="custom-control-input" type="checkbox" name="naoalcoolicas" id="checkbox-agua" onclick="SelecionarBebida('agua')">
+                                            <label class="custom-control-label" for="checkbox-agua">Água</label>
+                                        </div>
+                                    </td></tr>
+                                    <tr><td>
+                                        <div class="custom-control custom-checkbox checkbox-lg">
+                                            <input class="custom-control-input" type="checkbox" name="naoalcoolicas" id="checkbox-refrigerante" onclick="SelecionarBebida('refrigerante')">
+                                            <label class="custom-control-label" for="checkbox-refrigerante">Refrigerante</label>
+                                        </div>
+                                    </td></tr>
+                                    <tr><td>
+                                        <div class="custom-control custom-checkbox checkbox-lg">
+                                            <input class="custom-control-input" type="checkbox" name="naoalcoolicas" id="checkbox-suco" onclick="SelecionarBebida('suco')">
+                                            <label class="custom-control-label" for="checkbox-suco">Suco</label>
+                                        </div>
+                                    </td></tr>
+                                    <tr><td>
+                                        <div class="custom-control custom-checkbox checkbox-lg">
+                                            <input class="custom-control-input" type="checkbox" name="naoalcoolicas" id="checkbox-cha" onclick="SelecionarBebida('cha')">
+                                            <label class="custom-control-label" for="checkbox-cha">Chá</label>
+                                        </div>
+                                    </td></tr>
+                                    <tr><td>
+                                        <div class="custom-control custom-checkbox checkbox-lg">
+                                            <input class="custom-control-input" type="checkbox" name="naoalcoolicas" id="checkbox-energetico" onclick="SelecionarBebida('energetico')">
+                                            <label class="custom-control-label" for="checkbox-energetico">Energético</label>
+                                        </div>
+                                    </td></tr>
+                                    <tr><td>
+                                        <div class="custom-control custom-checkbox checkbox-lg">
+                                            <input class="custom-control-input" type="checkbox" name="naoalcoolicas" id="checkbox-tonico" onclick="SelecionarBebida('tonico')">
+                                            <label class="custom-control-label" for="checkbox-tonico">Tônico</label>
+                                        </div>
+                                    </td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="col-sm" id="bebidas-destiladas" style="display:none;">
+                            <table class="table">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">Destilados</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>
+                                        <div class="custom-control custom-checkbox checkbox-lg">
+                                            <input class="custom-control-input" type="checkbox" name="destilados" id="checkbox-whiskey" onclick="SelecionarBebida('whiskey')">
+                                            <label class="custom-control-label" for="checkbox-whiskey">Whiskey</label>
+                                        </div>
+                                    </td></tr>
+                                    <tr><td>
+                                        <div class="custom-control custom-checkbox checkbox-lg">
+                                            <input class="custom-control-input" type="checkbox" name="destilados" id="checkbox-vodka" onclick="SelecionarBebida('vodka')">
+                                            <label class="custom-control-label" for="checkbox-vodka">Vodka</label>
+                                        </div>
+                                    </td></tr>
+                                    <tr><td>
+                                        <div class="custom-control custom-checkbox checkbox-lg">
+                                            <input class="custom-control-input" type="checkbox" name="destilados" id="checkbox-sake" onclick="SelecionarBebida('sake')">
+                                            <label class="custom-control-label" for="checkbox-sake">Sake</label>
+                                        </div>
+                                    </td></tr>
+                                    <tr><td>
+                                        <div class="custom-control custom-checkbox checkbox-lg">
+                                            <input class="custom-control-input" type="checkbox" name="destilados" id="checkbox-gim" onclick="SelecionarBebida('gim')">
+                                            <label class="custom-control-label" for="checkbox-gim">Gim</label>
+                                        </div>
+                                    </td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Resultados</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id="row-cerveja" style="display:none;">
+                        <input type="hidden" id="qtd-cerveja" name="qtd-cerveja" value="1/2">
+                        <th scope="row">
+                            <span class="material-symbols-outlined">sports_bar</span>                        
+                        </th>
+                        <td>Cerveja (latinha) <span class="span-qtd-bebida" id="span-qtd-bebida-cerveja"></span></td>
+                    </tr>
+                    <tr id="row-vinho" style="display:none;">
+                        <input type="hidden" id="qtd-vinho" name="qtd-vinho" value="4">
+                        <th scope="row">
+                            <span class="material-symbols-outlined">wine_bar</span>
+                        </th>
+                        <td>Vinho (garrafa) <span class="span-qtd-bebida" id="span-qtd-bebida-vinho"></span></td>
+                    </tr>
+                    <tr id="row-agua" style="display:none;">
+                        <input type="hidden" id="qtd-agua" name="qtd-agua" value="4">
+                        <th scope="row">
+                            <span class="material-symbols-outlined">water_drop</span>
+                        </th>
+                        <td>Água (garrafa 2 litros) <span class="span-qtd-bebida" id="span-qtd-bebida-agua"></span></td>
+                    </tr>
+                    <tr id="row-refrigerante" style="display:none;">
+                        <input type="hidden" id="qtd-refrigerante" name="qtd-refrigerante" value="4">
+                        <th scope="row">
+                            <span class="material-symbols-outlined">local_drink</span>
+                        </th>
+                        <td>Refrigerante (garrafa 2 litros) <span class="span-qtd-bebida" id="span-qtd-bebida-refrigerante"></span></td>
+                    </tr>
+                    <tr id="row-suco" style="display:none;">
+                        <input type="hidden" id="qtd-suco" name="qtd-suco" value="1">
+                        <th scope="row">
+                            <span class="material-symbols-outlined">blender</span>
+                        </th>
+                        <td>Suco (copo) <span class="span-qtd-bebida" id="span-qtd-bebida-suco"></span></td>
+                    </tr>
+                    <tr id="row-cha" style="display:none;">
+                        <input type="hidden" id="qtd-cha" name="qtd-cha" value="1">
+                        <th scope="row">
+                            <span class="material-symbols-outlined">emoji_food_beverage</span>
+                        </th>
+                        <td>Chá (copo) <span class="span-qtd-bebida" id="span-qtd-bebida-cha"></span></td>
+                    </tr>
+                    <tr id="row-energetico" style="display:none;">
+                        <input type="hidden" id="qtd-energetico" name="qtd-energetico" value="1">
+                        <th scope="row">
+                            <span class="material-symbols-outlined">local_drink</span>
+                        </th>
+                        <td>Energético (latinha) <span class="span-qtd-bebida" id="span-qtd-bebida-energetico"></span></td>
+                    </tr>
+                    <tr id="row-tonico" style="display:none;">
+                        <input type="hidden" id="qtd-tonico" name="qtd-tonico" value="5">
+                        <th scope="row">
+                            <span class="material-symbols-outlined">local_drink</span>
+                        </th>
+                        <td>Tônico (garrafa) <span class="span-qtd-bebida" id="span-qtd-bebida-tonico"></span></td>
+                    </tr>
+                    <tr id="row-whiskey" style="display:none;">
+                        <input type="hidden" id="qtd-whiskey" name="qtd-whiskey" value="10">
+                        <th scope="row">
+                            <span class="material-symbols-outlined">liquor</span>
+                        </th>
+                        <td>Whiskey (garrafa) <span class="span-qtd-bebida" id="span-qtd-bebida-whiskey"></span></td>
+                    </tr>
+                    <tr id="row-vodka" style="display:none;">
+                        <input type="hidden" id="qtd-vodka" name="qtd-vodka" value="3">
+                        <th scope="row">
+                            <span class="material-symbols-outlined">liquor</span>
+                        </th>
+                        <td>Vodka (garrafa) <span class="span-qtd-bebida" id="span-qtd-bebida-vodka"></span></td>
+                    </tr>
+                    <tr id="row-sake" style="display:none;">
+                        <input type="hidden" id="qtd-sake" name="qtd-sake" value="5">
+                        <th scope="row">
+                            <span class="material-symbols-outlined">liquor</span>
+                        </th>
+                        <td>Sake (garrafa) <span class="span-qtd-bebida" id="span-qtd-bebida-sake"></span></td>
+                    </tr>
+                    <tr id="row-gim" style="display:none;">
+                        <input type="hidden" id="qtd-gim" name="qtd-gim" value="5">
+                        <th scope="row">
+                            <span class="material-symbols-outlined">liquor</span>
+                        </th>
+                        <td>Gim (garrafa) <span class="span-qtd-bebida" id="span-qtd-bebida-gim"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/calculadora.js"></script>
 
     <div class="secao-servicos-small">
         <div class="secao-servicos-small-container">
