@@ -225,6 +225,12 @@
                                         <label class="custom-control-label" for="checkbox-energetico">Energético</label>
                                     </div>
                                 </td></tr>
+                                <tr><td>
+                                    <div class="custom-control custom-checkbox checkbox-lg">
+                                        <input class="custom-control-input" type="checkbox" name="naoalcoolicas" id="checkbox-tonico" onclick="SelecionarBebida('tonico')">
+                                        <label class="custom-control-label" for="checkbox-tonico">Tônico</label>
+                                    </div>
+                                </td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -257,8 +263,8 @@
                                 </td></tr>
                                 <tr><td>
                                     <div class="custom-control custom-checkbox checkbox-lg">
-                                        <input class="custom-control-input" type="checkbox" name="destilados" id="checkbox-gin" onclick="SelecionarBebida('gin')">
-                                        <label class="custom-control-label" for="checkbox-gin">Gin</label>
+                                        <input class="custom-control-input" type="checkbox" name="destilados" id="checkbox-gim" onclick="SelecionarBebida('gim')">
+                                        <label class="custom-control-label" for="checkbox-gim">Gim</label>
                                     </div>
                                 </td></tr>
                             </tbody>
@@ -279,71 +285,88 @@
                 </thead>
                 <tbody>
                   <tr id="row-cerveja" style="display:none;">
+                    <input type="hidden" id="qtd-cerveja" name="qtd-cerveja" value="1/2">
                     <th scope="row">
-                        <span class="material-symbols-outlined">sports_bar</span>
-                        
+                        <span class="material-symbols-outlined">sports_bar</span>                        
                     </th>
-                    <td>Cerveja<span class="span-qtd-bebida"></span></td>
+                    <td>Cerveja (latinha) <span class="span-qtd-bebida" id="span-qtd-bebida-cerveja"></span></td>
                   </tr>
                   <tr id="row-vinho" style="display:none;">
+                    <input type="hidden" id="qtd-vinho" name="qtd-vinho" value="4">
                     <th scope="row">
                         <span class="material-symbols-outlined">wine_bar</span>
                     </th>
-                    <td>Vinho<span class="span-qtd-bebida"></span></td>
+                    <td>Vinho (garrafa) <span class="span-qtd-bebida" id="span-qtd-bebida-vinho"></span></td>
                   </tr>
                   <tr id="row-agua" style="display:none;">
+                    <input type="hidden" id="qtd-agua" name="qtd-agua" value="4">
                     <th scope="row">
                         <span class="material-symbols-outlined">water_drop</span>
                     </th>
-                    <td>Água<span class="span-qtd-bebida"></span></td>
+                    <td>Água (garrafa 2 litros) <span class="span-qtd-bebida" id="span-qtd-bebida-agua"></span></td>
                   </tr>
                   <tr id="row-refrigerante" style="display:none;">
+                    <input type="hidden" id="qtd-refrigerante" name="qtd-refrigerante" value="4">
                     <th scope="row">
                         <span class="material-symbols-outlined">local_drink</span>
                     </th>
-                    <td>Refrigerante<span class="span-qtd-bebida"></span></td>
+                    <td>Refrigerante (garrafa 2 litros) <span class="span-qtd-bebida" id="span-qtd-bebida-refrigerante"></span></td>
                   </tr>
                   <tr id="row-suco" style="display:none;">
+                    <input type="hidden" id="qtd-suco" name="qtd-suco" value="1">
                     <th scope="row">
                         <span class="material-symbols-outlined">blender</span>
                     </th>
-                    <td>Suco<span class="span-qtd-bebida"></span></td>
+                    <td>Suco (copo) <span class="span-qtd-bebida" id="span-qtd-bebida-suco"></span></td>
                   </tr>
                   <tr id="row-cha" style="display:none;">
+                    <input type="hidden" id="qtd-cha" name="qtd-cha" value="1">
                     <th scope="row">
                         <span class="material-symbols-outlined">emoji_food_beverage</span>
                     </th>
-                    <td>Chá<span class="span-qtd-bebida"></span></td>
+                    <td>Chá (copo) <span class="span-qtd-bebida" id="span-qtd-bebida-cha"></span></td>
                   </tr>
                   <tr id="row-energetico" style="display:none;">
+                    <input type="hidden" id="qtd-energetico" name="qtd-energetico" value="1">
                     <th scope="row">
                         <span class="material-symbols-outlined">local_drink</span>
                     </th>
-                    <td>Energético<span class="span-qtd-bebida"></span></td>
+                    <td>Energético (latinha) <span class="span-qtd-bebida" id="span-qtd-bebida-energetico"></span></td>
+                  </tr>
+                  <tr id="row-tonico" style="display:none;">
+                    <input type="hidden" id="qtd-tonico" name="qtd-tonico" value="5">
+                    <th scope="row">
+                        <span class="material-symbols-outlined">local_drink</span>
+                    </th>
+                    <td>Tônico (garrafa) <span class="span-qtd-bebida" id="span-qtd-bebida-tonico"></span></td>
                   </tr>
                   <tr id="row-whiskey" style="display:none;">
+                    <input type="hidden" id="qtd-whiskey" name="qtd-whiskey" value="10">
                     <th scope="row">
                         <span class="material-symbols-outlined">liquor</span>
                     </th>
-                    <td>Whiskey<span class="span-qtd-bebida"></span></td>
+                    <td>Whiskey (garrafa) <span class="span-qtd-bebida" id="span-qtd-bebida-whiskey"></span></td>
                   </tr>
                   <tr id="row-vodka" style="display:none;">
+                    <input type="hidden" id="qtd-vodka" name="qtd-vodka" value="3">
                     <th scope="row">
                         <span class="material-symbols-outlined">liquor</span>
                     </th>
-                    <td>Vodka<span class="span-qtd-bebida"></span></td>
+                    <td>Vodka (garrafa) <span class="span-qtd-bebida" id="span-qtd-bebida-vodka"></span></td>
                   </tr>
                   <tr id="row-sake" style="display:none;">
+                    <input type="hidden" id="qtd-sake" name="qtd-sake" value="5">
                     <th scope="row">
                         <span class="material-symbols-outlined">liquor</span>
                     </th>
-                    <td>Sake<span class="span-qtd-bebida"></span></td>
+                    <td>Sake (garrafa) <span class="span-qtd-bebida" id="span-qtd-bebida-sake"></span></td>
                   </tr>
-                  <tr id="row-gin" style="display:none;">
+                  <tr id="row-gim" style="display:none;">
+                    <input type="hidden" id="qtd-gim" name="qtd-gim" value="5">
                     <th scope="row">
                         <span class="material-symbols-outlined">liquor</span>
                     </th>
-                    <td>Gin<span class="span-qtd-bebida"></span></td>
+                    <td>Gim (garrafa) <span class="span-qtd-bebida" id="span-qtd-bebida-gim"></span></td>
                   </tr>
                 </tbody>
               </table>
