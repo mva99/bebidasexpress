@@ -79,15 +79,18 @@
 .secao-servicos-small-list {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     margin: 0 auto;
 }
 
 .servico-small {
+    height: 300px;
     width: 24%;
     background-color: white;
     padding: 15px;
+    outline: 1px solid black;
     /* margin-left: 5px;
     margin-right: 5px;
     margin-top: 5px;
@@ -95,8 +98,35 @@
 }
 
 .servico-small img {
-    height: 60%;
+    height: 200px;
     width: 100%;
+    outline: 1px solid black;
+}
+
+@media (max-width: 1150px) {
+    .secao-servicos-small-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 920px) {
+    .servico-small {
+        width: 48%;
+        margin-top: 30px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 650px) {
+    .secao-servicos-small-container {
+        width: 95%;
+    }
+
+    .servico-small {
+        width: 49%;
+        margin-top: 15px;
+        height: 300px;
+    }
 }
 
 .servico-small:nth-child(1) img {

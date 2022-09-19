@@ -348,7 +348,7 @@ li a {
     margin-top: 25px;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1150px) {
     .servicos {
         height:115vh;
     }
