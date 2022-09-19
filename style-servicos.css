@@ -103,32 +103,6 @@
     outline: 1px solid black;
 }
 
-@media (max-width: 1150px) {
-    .secao-servicos-small-container {
-        width: 90%;
-    }
-}
-
-@media (max-width: 920px) {
-    .servico-small {
-        width: 48%;
-        margin-top: 30px;
-        height: 280px;
-    }
-}
-
-@media (max-width: 650px) {
-    .secao-servicos-small-container {
-        width: 95%;
-    }
-
-    .servico-small {
-        width: 49%;
-        margin-top: 15px;
-        height: 300px;
-    }
-}
-
 .servico-small:nth-child(1) img {
     background-color: #3d8a86;
 }
@@ -163,6 +137,7 @@
 
 .botoes-servicos {
     display: flexbox;
+    flex-wrap: wrap;
 }
 
 .botoes-servicos div {
@@ -172,4 +147,78 @@
 
 .botoes-servicos :last-child {
     text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 650px) {
+    .secao-servico-vantagens {
+        flex-wrap: wrap;
+    }
+
+    .secao-servico-vantagem {
+        width: 100%;
+    }
+
+    .secao-servicos-small-container {
+        width: 95%;
+    }
+    
+    .botoes-servicos div {
+        float: none;
+        width: 100%;
+        padding-bottom: 15px;
+    }
+
+    .botoes-servicos :last-child {
+        text-align: center;
+    }
+
+    .botoes-servicos > div > a {
+        width: 100%;
+    }
+
+    .servico-small {
+        width: 49%;
+        margin-top: 15px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 920px) {
+    .servico-small {
+        width: 48%;
+        margin-top: 30px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .secao-servico-left {
+        display: none;
+    }
+
+    .secao-servico-right {
+        width: 100%;
+        padding-top: 2em;
+        padding-left: 0;
+    }
+
+    .secao-servicos-small-container {
+        width: 90%;
+    }
 }
