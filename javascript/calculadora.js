@@ -7,7 +7,6 @@ const botaoCalculadora = document.querySelector('.btn-calculadora')
 botaoCalculadora.onclick = (e) => {
     //https://thewebdev.info/2022/02/07/how-to-prevent-reload-with-link-onclick-without/
     e.preventDefault()
-    
     exibirOcultarCalculadora();
 }
 
@@ -43,13 +42,13 @@ function calcularBebidas() {
             var qtdEnergeticoGim = 0;
 
             //5 energéticos para cada vodka
-            if (document.getElementById('row-vodka').style.display != 'none') {
+            if (document.getElementById('resultado-vodka').style.display != 'none') {
                 var qtdVodka = document.getElementById('qtd-vodka').value;
                 qtdEnergeticoVodka = Math.ceil(eval(qtdAdultos) / eval(qtdVodka))
             }
 
             //5 energéticos para cada gim
-            if (document.getElementById('row-gim').style.display != 'none') {
+            if (document.getElementById('resultado-gim').style.display != 'none') {
                 var qtdGim = document.getElementById('qtd-gim').value;
                 qtdEnergeticoGim = Math.ceil(eval(qtdAdultos) / eval(qtdGim))
             }
@@ -68,9 +67,9 @@ function calcularBebidas() {
 document.getElementById('Bebida1').onclick = function() {
     var checkbox = document.getElementById('Bebida1');
     if (checkbox.checked) {
-        document.getElementById("bebidas-alcoolicas").style.display = "inline-block";
+        document.getElementById("escolha-bebida-alcoolica").style.display = "inline-block";
     } else {
-        document.getElementById("bebidas-alcoolicas").style.display = "none";
+        document.getElementById("escolha-bebida-alcoolica").style.display = "none";
     }
     calcularBebidas();
 }
@@ -78,9 +77,9 @@ document.getElementById('Bebida1').onclick = function() {
 document.getElementById('Bebida2').onclick = function() {
     var checkbox = document.getElementById('Bebida2');
     if (checkbox.checked) {
-        document.getElementById("bebidas-nao-alcoolicas").style.display = "inline-block";
+        document.getElementById("escolha-bebida-nao-alcoolica").style.display = "inline-block";
     } else {
-        document.getElementById("bebidas-nao-alcoolicas").style.display = "none";
+        document.getElementById("escolha-bebida-nao-alcoolica").style.display = "none";
     }
     calcularBebidas();
 }
@@ -88,9 +87,9 @@ document.getElementById('Bebida2').onclick = function() {
 document.getElementById('Bebida3').onclick = function() {
     var checkbox = document.getElementById('Bebida3');
     if (checkbox.checked) {
-        document.getElementById("bebidas-destiladas").style.display = "inline-block";
+        document.getElementById("escolha-bebida-destilada").style.display = "inline-block";
     } else {
-        document.getElementById("bebidas-destiladas").style.display = "none";
+        document.getElementById("escolha-bebida-destilada").style.display = "none";
     }
     calcularBebidas();
 }
@@ -99,9 +98,9 @@ function SelecionarBebida(tipo_bebida) {
     // alert(tipo_bebida);
     var checkbox = document.getElementById('checkbox-' + tipo_bebida);
     if (checkbox.checked) {
-        document.getElementById("row-" + tipo_bebida).style.display = "table-row";
+        document.getElementById("resultado-" + tipo_bebida).style.display = "inherit";
     } else {
-        document.getElementById("row-" + tipo_bebida).style.display = "none";
+        document.getElementById("resultado-" + tipo_bebida).style.display = "none";
     }
     calcularBebidas();
 }

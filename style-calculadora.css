@@ -15,6 +15,10 @@
   width: 100%;
 }
 
+.container-calculadora {
+  padding: 0 15px;
+}
+
 
 .secao-calculadora-form {
     /* margin: 0 auto; */
@@ -49,4 +53,72 @@
 
 .col-sm {
   padding: 0px !important;
+}
+
+
+
+
+
+
+
+.secao-calculadora {
+  padding: 50px 0;
+}
+
+.calculadora {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.escolhas-principais, .escolhas-bebidas {
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.escolha-tipo, .escolha-local, .escolha-tipos-bebidas {
+  flex-basis: 0;
+  flex-grow: 1;
+  min-width: 170px;
+}
+
+.escolha-bebida-alcoolica, .escolha-bebida-nao-alcoolica, .escolha-bebida-destilada {
+  flex-basis: 0;
+  flex-grow: 1;
+  min-width: 170px;
+}
+
+.resultados {
+  width: 100%;
+}
+
+.header-escolha {
+  background-color: #343a40;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.custom-control-container {
+  padding: 10px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.linha-resultado {
+  display: none;
+  padding: 10px;
+}
+
+@media (max-width: 830px) {
+  .secao-calculadora-in {
+    width: 85%;
+  }
+}
+
+@media (max-width: 540px) {
+  .secao-calculadora-in {
+    width: 90%;
+  }
 }
