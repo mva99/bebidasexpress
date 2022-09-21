@@ -86,7 +86,6 @@
 }
 
 .servico-small {
-    height: 300px;
     width: 24%;
     background-color: white;
     padding: 15px;
@@ -160,10 +159,30 @@
 
 
 
+@media (max-width: 1150px) {
+    .secao-servico-left {
+        display: none;
+    }
+
+    .secao-servico-right {
+        width: 100%;
+        padding-top: 2em;
+        padding-left: 0;
+    }
+
+    .secao-servicos-small-container {
+        width: 90%;
+    }
+}
 
 
-
-
+@media (max-width: 920px) {
+    .servico-small {
+        width: 48%;
+        margin-top: 30px;
+        height: 280px;
+    }
+}
 
 @media (max-width: 650px) {
     .secao-servico-vantagens {
@@ -196,29 +215,5 @@
         width: 49%;
         margin-top: 15px;
         height: 300px;
-    }
-}
-
-@media (max-width: 920px) {
-    .servico-small {
-        width: 48%;
-        margin-top: 30px;
-        height: 280px;
-    }
-}
-
-@media (max-width: 1150px) {
-    .secao-servico-left {
-        display: none;
-    }
-
-    .secao-servico-right {
-        width: 100%;
-        padding-top: 2em;
-        padding-left: 0;
-    }
-
-    .secao-servicos-small-container {
-        width: 90%;
     }
 }
