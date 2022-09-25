@@ -21,9 +21,8 @@ function exibirOcultarCalculadora() {
 
 calcularBebidas();
 
-document.getElementById('input_qtd_adultos').onchange = function() {
-    calcularBebidas();
-}
+document.getElementById('input_qtd_adultos').onchange = function() {calcularBebidas();}
+document.getElementById('input_qtd_criancas').onchange = function() {calcularBebidas();}
 
 function calcularBebidas() {
     spansQtd = document.getElementsByClassName("span-qtd-bebida");
@@ -34,9 +33,11 @@ function calcularBebidas() {
 
         var qtdBebida = document.getElementById(idQtdBebida).value;
         var qtdAdultos = document.getElementById('input_qtd_adultos').value;
+        var qtdCriancas = document.getElementById('input_qtd_criancas').value;
+        var bebida = item.id.replace("span-qtd-bebida-", "");
 
         //caso seja energético
-        if (item.id.replace("span-qtd-bebida-", "") == "energetico") {
+        if (bebida == "energetico") {
             var qtdEnergetico = Math.ceil(eval(qtdAdultos) / eval(qtdBebida));
             var qtdEnergeticoVodka = 0;
             var qtdEnergeticoGim = 0;
@@ -56,8 +57,16 @@ function calcularBebidas() {
             qtdEnergetico += qtdEnergeticoGim * 5;
             qtdEnergetico += qtdEnergeticoVodka * 5;
 
-            item.innerHTML = " x " + qtdEnergetico;
+            var qtdBebidaCriancas = Math.ceil( eval(qtdCriancas) / (eval(qtdBebida) * 2) );
+
+            item.innerHTML = " x " + (qtdEnergetico + qtdBebidaCriancas);
+        } else if (bebida == "agua" || bebida == "refrigerante" || bebida == "suco" || bebida == "cha" || bebida == "energetico" || bebida == "tonico" ) {
+            //bebidas para adultos e crianças
+            var qtdBebidaAdultos = Math.ceil(eval(qtdAdultos) / eval(qtdBebida));
+            var qtdBebidaCriancas = Math.ceil( eval(qtdCriancas) / (eval(qtdBebida) * 2) );
+            item.innerHTML = " x " + (qtdBebidaAdultos + qtdBebidaCriancas);
         } else {
+            //bebidas somente para adultos
             var qtdBebidaTotal = Math.ceil(eval(qtdAdultos) / eval(qtdBebida));
             item.innerHTML = " x " + qtdBebidaTotal;
         }
