@@ -43,11 +43,14 @@ body {
         height: 100%;
     }
     .header-right-down {
+        margin-top: 10px;
         text-align: right;
     }
+
     .header-right-up p {
+        margin: 0px;
         color: #f57b1b;
-        text-align: right;    
+        text-align: right;
         font: normal normal bold 15px/1.4em 'open sans condensed',sans-serif;
     }
 }
@@ -110,11 +113,6 @@ body {
 .header-left img {
     height: 100%;
     text-align: center;
-}
-
-.header-right-up, .header-right-down {
-    width: 100%;
-    height: 50%;
 }
 
 ul {
