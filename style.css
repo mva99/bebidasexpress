@@ -101,7 +101,7 @@ body {
 }
 
 .header-left a {
-    margin: 0px;
+    margin: 0 auto;
     display: inline;
     height: 80%;
     text-align: center;
