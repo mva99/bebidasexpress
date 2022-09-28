@@ -100,6 +100,13 @@ body {
     align-items: center;
 }
 
+.header-left a {
+    margin: 0px;
+    display: inline;
+    height: 80%;
+    text-align: center;
+}
+
 .header-left img {
     height: 100%;
     text-align: center;
