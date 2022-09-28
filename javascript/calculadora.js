@@ -38,6 +38,7 @@ function calcularBebidas() {
 
         //caso seja energético
         if (bebida == "energetico") {
+
             var qtdEnergetico = Math.ceil(eval(qtdAdultos) / eval(qtdBebida));
             var qtdEnergeticoVodka = 0;
             var qtdEnergeticoGin = 0;
@@ -67,6 +68,12 @@ function calcularBebidas() {
             item.innerHTML = " x " + (qtdBebidaAdultos + qtdBebidaCriancas);
         } else {
             //bebidas somente para adultos
+
+            if (bebida == "cerveja") {
+                if (qtdAdultos > 10)
+                    qtdAdultos = qtdAdultos/100*70
+            }
+
             var qtdBebidaTotal = Math.ceil(eval(qtdAdultos) / eval(qtdBebida));
             item.innerHTML = " x " + qtdBebidaTotal;
         }
