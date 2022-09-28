@@ -40,7 +40,7 @@ function calcularBebidas() {
         if (bebida == "energetico") {
             var qtdEnergetico = Math.ceil(eval(qtdAdultos) / eval(qtdBebida));
             var qtdEnergeticoVodka = 0;
-            var qtdEnergeticoGim = 0;
+            var qtdEnergeticoGin = 0;
 
             //5 energéticos para cada vodka
             if (document.getElementById('resultado-vodka').style.display != 'none') {
@@ -48,13 +48,13 @@ function calcularBebidas() {
                 qtdEnergeticoVodka = Math.ceil(eval(qtdAdultos) / eval(qtdVodka))
             }
 
-            //5 energéticos para cada gim
-            if (document.getElementById('resultado-gim').style.display != 'none') {
-                var qtdGim = document.getElementById('qtd-gim').value;
-                qtdEnergeticoGim = Math.ceil(eval(qtdAdultos) / eval(qtdGim))
+            //5 energéticos para cada gin
+            if (document.getElementById('resultado-gin').style.display != 'none') {
+                var qtdGin = document.getElementById('qtd-gin').value;
+                qtdEnergeticoGin = Math.ceil(eval(qtdAdultos) / eval(qtdGin))
             }
 
-            qtdEnergetico += qtdEnergeticoGim * 5;
+            qtdEnergetico += qtdEnergeticoGin * 5;
             qtdEnergetico += qtdEnergeticoVodka * 5;
 
             var qtdBebidaCriancas = Math.ceil( eval(qtdCriancas) / (eval(qtdBebida) * 2) );
