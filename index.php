@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <script src="lib/jquery/jquery-3.6.1.min.js"></script>
 </head>
 <body>
 
@@ -139,6 +140,7 @@
         </div>
 
     </div>
+
     <div class="contato" id="contato">
         <div class="contato-container">
             <div class="contatos">
@@ -151,7 +153,7 @@
             <div class="contato-formulario">
                 <div class="row">
                     <div class="col2 col-left">
-                        <input type="text" id="name" placeholder="Nome" /> 
+                        <input type="text" id="name" placeholder="Nome"/> 
                     </div>
                     <div class="col2 col-right">
                         <input type="text" id="email" placeholder="Email" />
@@ -159,22 +161,24 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <input type="text" id="phone" placeholder="Telefone" /> 
+                        <input type="text" id="phone" placeholder="Telefone"/> 
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <input type="text" id="text" placeholder="Digite sua mensagem aqui..." /> 
+                        <input id="text" placeholder="Digite sua mensagem aqui..."/> 
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <input type="submit" id="submit" value="Enviar" /> 
+                        <input type="submit" id="submit" value="Enviar" onclick="teste()" /> 
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="javascript/email-contato.js"></script>
 
     <div class="localizacao">
         <div class="localizacao-container">
