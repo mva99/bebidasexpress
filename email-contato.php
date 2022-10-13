@@ -3,6 +3,8 @@ $nome = $_REQUEST['nome'];
 $email = $_REQUEST['email'];
 $telefone = $_REQUEST['telefone'];
 $mensagem = $_REQUEST['mensagem'];
+
+//https://stackoverflow.com/questions/1483497/split-string-by-new-line-characters
 $mensagem_array = preg_split("/\r\n|\n|\r/", $mensagem);
 
 $mensagem = "";
