@@ -71,9 +71,9 @@
                        <img src="images/para-sua-casa.png" alt="">
                     </div>
                    <div class="item-servico-texto">
-                        <p><a href="/residencial.html">Para sua casa</a></a></p>
+                        <p><a href="/residencial.php">Para sua casa</a></a></p>
                         <p>* Festas em casa</p>
-                        <a href="/residencial.html"><p>SAIBA MAIS</p></a>
+                        <a href="/residencial.php"><p>SAIBA MAIS</p></a>
                    </div>
                </div>
 
@@ -82,9 +82,9 @@
                         <img src="images/para-sua-empresa.png" alt="">
                     </div>
                     <div class="item-servico-texto">
-                        <p><a href="/comercial.html">Para sua empresa</a></p>
+                        <p><a href="/comercial.php">Para sua empresa</a></p>
                         <p>* Eventos empresariais</p>
-                        <p><a href="/comercial.html">SAIBA MAIS</a></p>
+                        <p><a href="/comercial.php">SAIBA MAIS</a></p>
                     </div>
                 </div>
 
@@ -93,11 +93,11 @@
                         <img src="images/para-seu-evento.png" alt="">
                     </div>
                     <div class="item-servico-texto">
-                        <p><a href="/eventos.html">Para seu evento</a></p>
+                        <p><a href="/eventos.php">Para seu evento</a></p>
                         <p>* Casamentos</p>
                         <p>* Noivados</p>
                         <p>* Buffet</p>
-                        <p><a href="/eventos.html">SAIBA MAIS</a></p>
+                        <p><a href="/eventos.php">SAIBA MAIS</a></p>
                     </div>
                 </div>
                 
@@ -106,10 +106,10 @@
                         <img src="images/para-seu-estabelecimento.png" alt="">
                     </div>
                     <div class="item-servico-texto">
-                        <p><a href="/estabelecimentos.html">Para seu estabelecimento</a></p>
+                        <p><a href="/estabelecimentos.php">Para seu estabelecimento</a></p>
                         <p>* Barbearias</p>
                         <p>* Lanchonetes</p>
-                        <p><a href="/estabelecimentos.html">SAIBA MAIS</a></p>
+                        <p><a href="/estabelecimentos.php">SAIBA MAIS</a></p>
                     </div>
                 </div>
 

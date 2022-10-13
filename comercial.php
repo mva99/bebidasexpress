@@ -15,7 +15,7 @@
     <div class="header">
         <div class="header-container">
             <div class="header-left">
-                <a href="/index.html"><img src="images/logo.png" alt=""></a>
+                <a href="/index"><img src="images/logo.png" alt=""></a>
             </div>
             <div class="header-right">
                 <div class="header-right-up">
@@ -37,23 +37,23 @@
     <div class="secao-servico">
         <div class="secao-servico-container">
             <div class="secao-servico-left">
-                <img src="images/para-seu-estabelecimento.png" alt="">
+                <img src="images/para-sua-empresa.png" alt="">
             </div>
             <div class="secao-servico-right">
-                <h1 class="secao-servico-h1">Para Estabelecimentos</h1>
-                <p class="secao-servico-p">Possui um estabelecimento que serve bebidas, conte com a Alemanha Bebidas, não foque seus esforços, recursos e tempo com isso conte conosco.</p>
+                <h1 class="secao-servico-h1">Para Sua Empresa</h1>
+                <p class="secao-servico-p">Vai fazer aquela festa de fim de ano para seus colaboradores, conte com a Alemanha Bebidas e não tenha dor de cabeça com desperdício de bebidas ou sobras, garantimos a quantidade exata para seu evento.</p>
                 <div class="secao-servico-vantagens">
                     <div class="secao-servico-vantagem">
                         <h2 class="secao-servico-h2">Praticidade</h2>
-                        <p class="secao-servico-p">Geladeira sempre cheia sem utilizar seus recursos financeiros.</p>
+                        <p class="secao-servico-p">Não se preocupe se a quantidade de bebida é suficiente.</p>
                     </div>
                     <div class="secao-servico-vantagem">
                         <h2 class="secao-servico-h2">Garantia</h2>
-                        <p class="secao-servico-p">Geladeira cheia e bebidas sempre gelada.</p>
+                        <p class="secao-servico-p">Garantimos que seu evento não fique sem bebida e estejam sempre geladas.</p>
                     </div>
                     <div class="secao-servico-vantagem">
                         <h2 class="secao-servico-h2">Segurança</h2>
-                        <p class="secao-servico-p">Prazo de entrega e qualidade das bebidas.</p>
+                        <p class="secao-servico-p">Oferecemos contratos e garantias de nossos serviços para que seu evento corra tudo bem.</p>
                     </div>
                 </div>
                 <br><br>
@@ -361,19 +361,19 @@
             <div class="secao-servicos-small-list">
                 <div class="servico-small">
                     <img src="images/para-sua-casa.png" alt="">
-                    <a href="/residencial.html"><p>Para Residências</p></a>
+                    <a href="/residencial.php"><p>Para Residências</p></a>
                 </div>
                 <div class="servico-small">
                     <img src="images/para-sua-empresa.png" alt="">
-                    <a href="/comercial.html"><p>Para Empresas</p></a>
+                    <a href="#"><p>Para Empresas</p></a>
                 </div>
                 <div class="servico-small">
                     <img src="images/para-seu-evento.png" alt="">
-                    <a href="/eventos.html"><p>Para Eventos</p></a>
+                    <a href="/eventos.php"><p>Para Eventos</p></a>
                 </div>
                 <div class="servico-small">
                     <img src="images/para-seu-estabelecimento.png" alt="">
-                    <a href="#"><p>Para Estabelecimentos</p></a>
+                    <a href="/estabelecimentos.php"><p>Para Estabelecimentos</p></a>
                 </div>
             </div>
         </div>
