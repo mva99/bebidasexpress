@@ -27,6 +27,43 @@ document.getElementById('input_qtd_criancas').onchange = function() {calcularBeb
 function calcularBebidas() {
     spansQtd = document.getElementsByClassName("span-qtd-bebida");
 
+    //reseta a escolha dos tipos de bebidas que forem escondidas
+    if (document.getElementById("escolha-bebida-alcoolica").style.display == "none") {
+        document.getElementById('resultado-cerveja').style.display = 'none';
+        document.getElementById('resultado-vinho').style.display = 'none';
+
+        document.getElementById('checkbox-cerveja').checked = false;
+        document.getElementById('checkbox-vinho').checked = false;
+    }
+
+    if (document.getElementById("escolha-bebida-nao-alcoolica").style.display == "none") {
+        document.getElementById('resultado-agua').style.display = 'none';
+        document.getElementById('resultado-refrigerante').style.display = 'none';
+        document.getElementById('resultado-suco').style.display = 'none';
+        document.getElementById('resultado-cha').style.display = 'none';
+        document.getElementById('resultado-energetico').style.display = 'none';
+        document.getElementById('resultado-tonico').style.display = 'none';
+
+        document.getElementById('checkbox-agua').checked = false;
+        document.getElementById('checkbox-refrigerante').checked = false;
+        document.getElementById('checkbox-suco').checked = false;
+        document.getElementById('checkbox-cha').checked = false;
+        document.getElementById('checkbox-energetico').checked = false;
+        document.getElementById('checkbox-tonico').checked = false;
+    }
+
+    if (document.getElementById("escolha-bebida-destilada").style.display == "none") {
+        document.getElementById('resultado-whisky').style.display = 'none';
+        document.getElementById('resultado-vodka').style.display = 'none';
+        document.getElementById('resultado-sake').style.display = 'none';
+        document.getElementById('resultado-gin').style.display = 'none';
+
+        document.getElementById('checkbox-whisky').checked = false;
+        document.getElementById('checkbox-vodka').checked = false;
+        document.getElementById('checkbox-sake').checked = false;
+        document.getElementById('checkbox-gin').checked = false;
+    }
+
     Array.prototype.forEach.call(spansQtd, function(item) {
         var idQtdBebida = item.id;
         idQtdBebida = idQtdBebida.replace("span-qtd-bebida-", "qtd-");
