@@ -567,6 +567,7 @@ li a {
 
 .row #text {
     height: 10em;
+    width: 100%;
 }
 
 .color-1 {

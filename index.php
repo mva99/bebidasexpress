@@ -166,7 +166,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <input id="text" placeholder="Digite sua mensagem aqui..."/> 
+                        <textarea id="text" placeholder="Digite sua mensagem aqui..."></textarea>
                     </div>
                 </div>
                 <div class="row">
