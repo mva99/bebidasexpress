@@ -12,27 +12,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <div class="header">
-        <div class="header-container">
-            <div class="header-left">
-                <a href="/index"><img src="images/logo.png" alt=""></a>
-            </div>
-            <div class="header-right">
-                <div class="header-right-up">
-                    <p>(11) 94182-3842</p>
-                    <p>(11) 97153-3333</p>
-                </div>
-                <div class="header-right-down">
-                    <ul>
-                        <li><a class="active" href="/#sobre-nos">EMPRESA</a></li>
-                        <li><a href="/#servicos">SERVIÇOS</a></li>
-                        <li><a href="/#depoimentos">DEPOIMENTOS</a></li>
-                        <li><a href="/#contato">CONTATO</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+
+    <?php include 'modular/header.php';?>
 
     <div class="secao-servico">
         <div class="secao-servico-container">
