@@ -47,7 +47,6 @@ body {
 }
 
 .header-right {
-    outline: 1px solid black;
     margin: 0;
     position: absolute;
     width: 100%;
