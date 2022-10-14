@@ -122,3 +122,47 @@
     width: 90%;
   }
 }
+
+.row-calculadora:after {
+  content:"";
+  display:block;
+  clear:both;
+ }
+
+.row-calculadora {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.row-calculadora textarea {
+  height: 150px;
+}
+
+.row-calculadora input, .row-calculadora textarea {
+  width: 100%;
+  padding: 10px;
+}
+
+.col-left-calculadora, .col-right-calculadora {
+  width: 49%;
+}
+
+.col-left-calculadora {
+  float: left;
+}
+
+.col-right-calculadora {
+  float: right;
+}
+
+@media (max-width: 620px) {
+  .col-left-calculadora, .col-right-calculadora {
+    width: 100%;
+    float: none;
+    display: inherit;
+  }
+
+  .col-right-calculadora {
+    margin-top: 15px;
+  }
+}

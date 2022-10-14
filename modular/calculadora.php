@@ -1,4 +1,4 @@
-    <div class="secao-calculadora" id="secao-calculadora" style="display:none;">
+    <div class="secao-calculadora" id="secao-calculadora">
         <div class="secao-calculadora-in">
             <h1>Calculadora</h1>
             <br>
@@ -278,8 +278,35 @@
                         </div>
                     </div>
             </div>
-            
+
+            <div class="contato-formulario-calculadora" id="contato-formulario-calculadora" style="display:none;">
+                <div class="row-calculadora">
+                    <div class="col2-calculadora col-left-calculadora">
+                        <input type="text" id="name" placeholder="Nome"/> 
+                    </div>
+                    <div class="col2-calculadora col-right-calculadora">
+                        <input type="text" id="email" placeholder="Email" />
+                    </div>
+                </div>
+                <div class="row-calculadora">
+                    <div class="col-calculadora">
+                        <input type="text" id="phone" placeholder="Telefone"/> 
+                    </div>
+                </div>
+                <div class="row-calculadora">
+                    <div class="col-calculadora">
+                        <textarea id="text" placeholder="Digite sua mensagem aqui..."></textarea>
+                    </div>
+                </div>
+                <div class="row-calculadora">
+                    <div class="col-calculadora">
+                        <input type="submit" id="submit" value="Enviar" onclick="envioFormularioCalculadora()" /> 
+                    </div>
+                </div>
+            </div>
+
         </div>
+
     </div>
 
     <script src="javascript/calculadora.js"></script>

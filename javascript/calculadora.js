@@ -1,23 +1,29 @@
-//document.getElementById("bebidas-alcoolicas").style.display = "none";
-// document.getElementsByClassName('btn-calculadora').onclick = function() {
-    
-// }
-
 function exibirOcultarFaleComAGente() {
+    var exibido = document.getElementById('contato-formulario-calculadora').style.display;
 
-    var tipo = $(".escolha-tipo input[type='radio']:checked").val();
+    if (exibido == 'none') {
+        document.getElementById('secao-calculadora').style.display = "inherit";
+        document.getElementById('contato-formulario-calculadora').style.display = "inherit";
+    } else {
+        document.getElementById('contato-formulario-calculadora').style.display = "none";
+    }
+}
+
+function envioFormularioCalculadora() {
+
+    var tipo = $(".escolha-tipo input[type='radio']:checked").get(0);
     if (tipo == null) {
         alert('É necessário escolher o tipo de evento!')
         return;
     }
-    tipo = $(".escolha-tipo label[for='" + tipo.id + "']").innerText;
+    tipo = $(".escolha-tipo label[for='" + tipo.id + "']").get(0).innerText;
 
-    var local = $(".escolha-local input[type='radio']:checked").val();
+    var local = $(".escolha-local input[type='radio']:checked").get(0);
     if (local == null) {
         alert('É necessário escolher o local do evento!')
         return;
     }
-    local = $(".escolha-local label[for='" + local.id + "']").innerText;
+    local = $(".escolha-local label[for='" + local.id + "']").get(0).innerText;
 
     var tiposBebidas = $(".escolha-tipos-bebidas input[type='checkbox']:checked")
     var bebidaAlcoolicaSelecionada = false;
@@ -50,6 +56,9 @@ function exibirOcultarFaleComAGente() {
     var bebidasAlcoolicasTmp = [];
     var bebidasNaoAlcoolicasTmp = [];
     var bebidasDestiladasTmp = [];
+    var bebidasAlcoolicasTexto = "";
+    var bebidasNaoAlcoolicasTexto = "";
+    var bebidasDestiladasTexto = "";
 
     if (bebidaAlcoolicaSelecionada && bebidasAlcoolicas.length == 0) {
         alert('É necesário selecionar pelo menos uma bebida alcoólica!')
@@ -69,6 +78,7 @@ function exibirOcultarFaleComAGente() {
         var bebida = item.id.replace('checkbox-','');
         var textoBebida = $('#resultado-' + bebida).get(0).innerText.replace($('#resultado-' + bebida + ' .material-symbols-outlined').get(0).innerText, '').trim();        
         bebidasAlcoolicasTmp.push(textoBebida);
+        bebidasAlcoolicasTexto += textoBebida + "<br>";
     });
     bebidasAlcoolicas = bebidasAlcoolicasTmp;
 
@@ -77,6 +87,7 @@ function exibirOcultarFaleComAGente() {
         var bebida = item.id.replace('checkbox-','');
         var textoBebida = $('#resultado-' + bebida).get(0).innerText.replace($('#resultado-' + bebida + ' .material-symbols-outlined').get(0).innerText, '').trim();        
         bebidasNaoAlcoolicasTmp.push(textoBebida);
+        bebidasNaoAlcoolicasTexto += textoBebida + "<br>";
     });
     bebidasNaoAlcoolicas = bebidasNaoAlcoolicasTmp;
 
@@ -85,8 +96,69 @@ function exibirOcultarFaleComAGente() {
         var bebida = item.id.replace('checkbox-','');
         var textoBebida = $('#resultado-' + bebida).get(0).innerText.replace($('#resultado-' + bebida + ' .material-symbols-outlined').get(0).innerText, '').trim();        
         bebidasDestiladasTmp.push(textoBebida);
+        bebidasDestiladasTexto += textoBebida + "<br>";
     });
     bebidasDestiladas = bebidasDestiladasTmp;
+
+
+    //dados do cliente
+    var nome = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var telefone = document.getElementById('phone').value;
+    var mensagem = document.getElementById('text').value;
+
+    if (nome == null || nome == "") {
+        alert('Por favor preenche o seu nome!')
+        return;
+    }
+
+    if (email == null || email == "") {
+        alert('Por favor preenche o seu e-mail!')
+        return;
+    }
+
+    if (telefone == null || telefone == "") {
+        alert('Por favor preenche o seu telefone!')
+        return;
+    }
+
+    if (mensagem == null || mensagem == "") {
+        alert('Por favor digite uma mensagem!')
+        return;
+    }
+    
+    $.ajax({
+        url: "/email-calculadora.php",
+        method: "get",
+        traditional : true,
+        data: {
+            tipo: tipo,
+            local: local,
+
+            bebidaAlcoolicaSelecionada: bebidaAlcoolicaSelecionada,
+            bebidaNaoAlcoolicaSelecionada: bebidaNaoAlcoolicaSelecionada,
+            bebidaDestiladaSelecionada: bebidaDestiladaSelecionada,
+
+            bebidasAlcoolicas: bebidasAlcoolicas,
+            bebidasNaoAlcoolicas: bebidasNaoAlcoolicas,
+            bebidasDestiladas: bebidasDestiladas,
+
+            bebidasAlcoolicasTexto: bebidasAlcoolicasTexto,
+            bebidasNaoAlcoolicasTexto: bebidasNaoAlcoolicasTexto,
+            bebidasDestiladasTexto: bebidasDestiladasTexto,
+
+            nome: nome,
+            email: email,
+            telefone: telefone,
+            mensagem: mensagem
+        },
+        success: function (response) {
+            alert('E-mail enviado com sucesso.');
+        },
+        error: function (response) {
+            alert('Ocorreu um erro no envio do e-mail.');
+        }
+    })
 
 }
 
@@ -95,6 +167,13 @@ botaoCalculadora.onclick = (e) => {
     //https://thewebdev.info/2022/02/07/how-to-prevent-reload-with-link-onclick-without/
     e.preventDefault()
     exibirOcultarCalculadora();
+}
+
+const botaoFaleComAGente = document.querySelector('.btn-fale-com-a-gente')
+botaoFaleComAGente.onclick = (e) => {
+    //https://thewebdev.info/2022/02/07/how-to-prevent-reload-with-link-onclick-without/
+    e.preventDefault()
+    exibirOcultarFaleComAGente();
 }
 
 function exibirOcultarCalculadora() {

@@ -40,10 +40,10 @@
                 <br><br>
                 <div class="botoes-servicos">
                     <div>
-                        <a class="button button-green btn-calculadora" onclick="exibirOcultarCalculadora()" href="">CALCULADORA</a>
+                        <a class="button button-green btn-calculadora" href="#">CALCULADORA</a>
                     </div>
                     <div>
-                        <a class="button button-green btn-fale-com-a-gente" href="/#contato">FALE COM A GENTE</a>
+                        <a class="button button-green btn-fale-com-a-gente" href="#">FALE COM A GENTE</a>
                     </div>
                 </div>
             </div>
