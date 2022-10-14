@@ -1,4 +1,4 @@
-    <div class="secao-calculadora" id="secao-calculadora">
+    <div class="secao-calculadora" id="secao-calculadora" style="display:none;">
         <div class="secao-calculadora-in">
             <h1>Calculadora</h1>
             <br>
