@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style-calculadora.css">
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="lib/jquery/jquery-3.6.1.min.js"></script>
 </head>
 <body>
 
@@ -40,10 +41,10 @@
                 <br><br>
                 <div class="botoes-servicos">
                     <div>
-                        <a class="button button-green btn-calculadora" onclick="exibirOcultarCalculadora()" href="">CALCULADORA</a>
+                        <a class="button button-green btn-calculadora" onclick="exibirOcultarCalculadora()" href="#">CALCULADORA</a>
                     </div>
                     <div>
-                        <a class="button button-green btn-fale-com-a-gente" href="/#contato">FALE COM A GENTE</a>
+                        <a class="button button-green btn-fale-com-a-gente" onclick="exibirOcultarFaleComAGente()" href="#">FALE COM A GENTE</a>
                     </div>
                 </div>
                 

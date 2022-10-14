@@ -3,6 +3,93 @@
     
 // }
 
+function exibirOcultarFaleComAGente() {
+
+    var tipo = $(".escolha-tipo input[type='radio']:checked").val();
+    if (tipo == null) {
+        alert('É necessário escolher o tipo de evento!')
+        return;
+    }
+    tipo = $(".escolha-tipo label[for='" + tipo.id + "']").innerText;
+
+    var local = $(".escolha-local input[type='radio']:checked").val();
+    if (local == null) {
+        alert('É necessário escolher o local do evento!')
+        return;
+    }
+    local = $(".escolha-local label[for='" + local.id + "']").innerText;
+
+    var tiposBebidas = $(".escolha-tipos-bebidas input[type='checkbox']:checked")
+    var bebidaAlcoolicaSelecionada = false;
+    var bebidaNaoAlcoolicaSelecionada = false;
+    var bebidaDestiladaSelecionada = false;
+    if (tiposBebidas.length == 0) {
+        alert('É selecionar algum tipo de bebida!')
+        return;
+    }
+    Array.prototype.forEach.call(tiposBebidas, function(item, index) {
+        switch (item.id) {
+            case 'Bebida1':
+                //tiposBebidasTmp.push("alcoolicas");
+                bebidaAlcoolicaSelecionada = true;
+                break;
+            case 'Bebida2':
+                //tiposBebidasTmp.push("nao-alcoolicas");
+                bebidaNaoAlcoolicaSelecionada = true;
+                break;
+            case 'Bebida3':
+                //tiposBebidasTmp.push("destilados");
+                bebidaDestiladaSelecionada = true;
+                break;
+        }
+    });
+
+    var bebidasAlcoolicas = $(".escolha-bebida-alcoolica input[type='checkbox']:checked");
+    var bebidasNaoAlcoolicas = $(".escolha-bebida-nao-alcoolica input[type='checkbox']:checked");
+    var bebidasDestiladas = $(".escolha-bebida-destilada input[type='checkbox']:checked");
+    var bebidasAlcoolicasTmp = [];
+    var bebidasNaoAlcoolicasTmp = [];
+    var bebidasDestiladasTmp = [];
+
+    if (bebidaAlcoolicaSelecionada && bebidasAlcoolicas.length == 0) {
+        alert('É necesário selecionar pelo menos uma bebida alcoólica!')
+        return;
+    }
+    if (bebidaNaoAlcoolicaSelecionada && bebidasNaoAlcoolicas.length == 0) {
+        alert('É necesário selecionar pelo menos uma bebida não alcoólica!')
+        return;
+    }
+    if (bebidaDestiladaSelecionada && bebidasDestiladas.length == 0) {
+        alert('É necesário selecionar pelo menos uma destilada!')
+        return;
+    }
+
+    //pega nome e quantidade das bebidas alcoólicas
+    Array.prototype.forEach.call(bebidasAlcoolicas, function(item, index) {
+        var bebida = item.id.replace('checkbox-','');
+        var textoBebida = $('#resultado-' + bebida).get(0).innerText.replace($('#resultado-' + bebida + ' .material-symbols-outlined').get(0).innerText, '').trim();        
+        bebidasAlcoolicasTmp.push(textoBebida);
+    });
+    bebidasAlcoolicas = bebidasAlcoolicasTmp;
+
+    //pega nome e quantidade das bebidas não alcoólicas
+    Array.prototype.forEach.call(bebidasNaoAlcoolicas, function(item, index) {
+        var bebida = item.id.replace('checkbox-','');
+        var textoBebida = $('#resultado-' + bebida).get(0).innerText.replace($('#resultado-' + bebida + ' .material-symbols-outlined').get(0).innerText, '').trim();        
+        bebidasNaoAlcoolicasTmp.push(textoBebida);
+    });
+    bebidasNaoAlcoolicas = bebidasNaoAlcoolicasTmp;
+
+    //pega nome e quantidade das bebidas destiladas
+    Array.prototype.forEach.call(bebidasDestiladas, function(item, index) {
+        var bebida = item.id.replace('checkbox-','');
+        var textoBebida = $('#resultado-' + bebida).get(0).innerText.replace($('#resultado-' + bebida + ' .material-symbols-outlined').get(0).innerText, '').trim();        
+        bebidasDestiladasTmp.push(textoBebida);
+    });
+    bebidasDestiladas = bebidasDestiladasTmp;
+
+}
+
 const botaoCalculadora = document.querySelector('.btn-calculadora')
 botaoCalculadora.onclick = (e) => {
     //https://thewebdev.info/2022/02/07/how-to-prevent-reload-with-link-onclick-without/
