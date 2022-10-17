@@ -279,7 +279,7 @@
                     </div>
             </div>
 
-            <div class="contato-formulario-calculadora" id="contato-formulario-calculadora" style="display:none;">
+            <div class="contato-formulario-calculadora" id="contato-formulario-calculadora">
                 <div class="row-calculadora">
                     <div class="col2-calculadora col-left-calculadora">
                         <input type="text" id="name" placeholder="Nome"/> 

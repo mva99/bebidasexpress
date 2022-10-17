@@ -43,9 +43,6 @@
                     <div>
                         <a class="button button-green btn-calculadora" href="#">CALCULADORA</a>
                     </div>
-                    <div>
-                        <a class="button button-green btn-fale-com-a-gente" href="#">FALE COM A GENTE</a>
-                    </div>
                 </div>
                 
             </div>

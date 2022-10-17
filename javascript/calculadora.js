@@ -1,14 +1,3 @@
-function exibirOcultarFaleComAGente() {
-    var exibido = document.getElementById('contato-formulario-calculadora').style.display;
-
-    if (exibido == 'none') {
-        document.getElementById('secao-calculadora').style.display = "inherit";
-        document.getElementById('contato-formulario-calculadora').style.display = "inherit";
-    } else {
-        document.getElementById('contato-formulario-calculadora').style.display = "none";
-    }
-}
-
 function envioFormularioCalculadora() {
 
     var tipo = $(".escolha-tipo input[type='radio']:checked").get(0);
@@ -167,13 +156,6 @@ botaoCalculadora.onclick = (e) => {
     //https://thewebdev.info/2022/02/07/how-to-prevent-reload-with-link-onclick-without/
     e.preventDefault()
     exibirOcultarCalculadora();
-}
-
-const botaoFaleComAGente = document.querySelector('.btn-fale-com-a-gente')
-botaoFaleComAGente.onclick = (e) => {
-    //https://thewebdev.info/2022/02/07/how-to-prevent-reload-with-link-onclick-without/
-    e.preventDefault()
-    exibirOcultarFaleComAGente();
 }
 
 function exibirOcultarCalculadora() {
